@@ -1,7 +1,7 @@
-import { CssProperty, Style } from 'tns-core-modules/ui/core/properties';
+import { CssProperty, Style } from '@nativescript/core/ui/core/properties';
 import { ShadowedLabel as Common } from './shadowed-label.common';
-import { Color } from 'tns-core-modules/color/color';
-import { dip } from 'tns-core-modules/ui/core/view';
+import { Color } from '@nativescript/core/color';
+import { dip } from '@nativescript/core/ui/core/view';
 
 export declare class ShadowedLabel extends Common {
     textShadow: any;

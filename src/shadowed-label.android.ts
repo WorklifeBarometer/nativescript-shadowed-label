@@ -1,6 +1,6 @@
 import { TextShadow } from './index';
 import { ShadowedLabel as Common, textShadowProperty } from './shadowed-label.common';
-import { layout } from 'tns-core-modules/utils/utils';
+import { layout } from '@nativescript/core/utils';
 
 export class ShadowedLabel extends Common {
     [textShadowProperty.setNative](value: TextShadow) {

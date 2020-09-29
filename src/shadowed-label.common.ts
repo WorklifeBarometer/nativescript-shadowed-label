@@ -1,11 +1,11 @@
 import { ShadowedLabel as ShadowedLabelDefinition, TextShadow } from './index';
-import { Label } from 'tns-core-modules/ui/label/label';
-import { CssProperty, Style } from 'tns-core-modules/ui/core/properties';
-import { Color } from 'tns-core-modules/color/color';
-// import { Length } from 'tns-core-modules/ui/styling/style-properties';
-import { isIOS } from 'tns-core-modules/platform';
-import { layout } from 'tns-core-modules/utils/utils';
-import { dip } from 'tns-core-modules/ui/core/view';
+import { Label } from '@nativescript/core/ui/label';
+import { CssProperty } from '@nativescript/core/ui/core/properties';
+import { Color } from '@nativescript/core/color';
+import { isIOS } from '@nativescript/core/platform';
+import { layout } from '@nativescript/core/utils';
+import { dip } from '@nativescript/core/ui/core/view';
+import { Style } from "@nativescript/core";
 
 export class ShadowedLabel extends Label implements ShadowedLabelDefinition {
   get textShadow() {
@@ -33,7 +33,7 @@ export const textShadowProperty = new CssProperty<Style, string | TextShadow>({
 });
 
 // Augmenting Style definition so it includes our textShadow property
-declare module 'tns-core-modules/ui/styling/style' {
+declare module '@nativescript/core/ui/styling/style' {
   interface Style {
     textShadow: string | TextShadow;
   }
